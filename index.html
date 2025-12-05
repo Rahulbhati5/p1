@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         :root {
             --primary: #8C1DC3;
             --secondary: #CD1FA2;
@@ -19,18 +19,18 @@
             --dark: #121316;
             --white: #FFFFFF;
         }
-
+        
         html {
             scroll-behavior: smooth;
         }
-
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             color: var(--dark);
             background-color: var(--white);
             line-height: 1.6;
         }
-
+        
         /* Navigation */
         nav {
             background-color: var(--white);
@@ -43,7 +43,7 @@
             top: 0;
             z-index: 100;
         }
-
+        
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -52,24 +52,24 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
+        
         .nav-links {
             display: flex;
             gap: 2rem;
             list-style: none;
         }
-
+        
         .nav-links a {
             text-decoration: none;
             color: var(--dark);
             font-weight: 500;
             transition: color 0.3s ease;
         }
-
+        
         .nav-links a:hover {
             color: var(--primary);
         }
-
+        
         .nav-cta {
             background-color: var(--primary);
             color: var(--white);
@@ -80,11 +80,11 @@
             font-weight: 600;
             transition: background-color 0.3s ease;
         }
-
+        
         .nav-cta:hover {
             background-color: var(--secondary);
         }
-
+        
         /* Hero Section */
         .hero {
             background-color: var(--bg);
@@ -96,35 +96,35 @@
             justify-content: center;
             align-items: center;
         }
-
+        
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
             line-height: 1.2;
         }
-
+        
         .hero-highlight {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
+        
         .hero p {
             font-size: 1.25rem;
             color: #555;
             max-width: 600px;
             margin: 0 auto 2rem;
         }
-
+        
         .hero-cta {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-
+        
         .btn {
             padding: 1rem 2rem;
             border: none;
@@ -136,65 +136,65 @@
             text-decoration: none;
             display: inline-block;
         }
-
+        
         .btn-primary {
             background-color: var(--primary);
             color: var(--white);
         }
-
+        
         .btn-primary:hover {
             background-color: var(--secondary);
             transform: translateY(-2px);
             box-shadow: 0 8px 16px rgba(140, 29, 195, 0.2);
         }
-
+        
         .btn-secondary {
             background-color: var(--white);
             color: var(--primary);
             border: 2px solid var(--primary);
         }
-
+        
         .btn-secondary:hover {
             background-color: var(--bg);
         }
-
+        
         /* About Section */
         .about {
             padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .section-title {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
-
+        
         .section-subtitle {
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 3rem;
         }
-
+        
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: center;
         }
-
+        
         .about-text h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--primary);
         }
-
+        
         .about-text p {
             margin-bottom: 1rem;
             color: #555;
         }
-
+        
         .about-image {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             border-radius: 12px;
@@ -207,25 +207,25 @@
             font-weight: 600;
             text-align: center;
         }
-
+        
         /* Services Section */
         .services {
             background-color: var(--bg);
             padding: 6rem 2rem;
         }
-
+        
         .services-container {
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-
+        
         .service-card {
             background-color: var(--white);
             padding: 2rem;
@@ -233,13 +233,13 @@
             border: 2px solid var(--gray);
             transition: all 0.3s ease;
         }
-
+        
         .service-card:hover {
             border-color: var(--primary);
             box-shadow: 0 12px 24px rgba(140, 29, 195, 0.15);
             transform: translateY(-4px);
         }
-
+        
         .service-icon {
             width: 60px;
             height: 60px;
@@ -252,18 +252,18 @@
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-
+        
         .service-card h3 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
             color: var(--dark);
         }
-
+        
         .service-card p {
             color: #666;
             margin-bottom: 1.5rem;
         }
-
+        
         .service-tag {
             display: inline-block;
             background-color: var(--secondary);
@@ -273,7 +273,7 @@
             font-size: 0.85rem;
             font-weight: 600;
         }
-
+        
         /* Career Section */
         .career {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -281,94 +281,136 @@
             padding: 4rem 2rem;
             text-align: center;
         }
-
+        
         .career-content {
             max-width: 800px;
             margin: 0 auto;
         }
-
+        
         .career h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-
+        
         .career p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
             opacity: 0.95;
         }
-
+        
+        .btn-light {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+        
+        .btn-light:hover {
+            background-color: var(--primary);
+        }
+        
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
             background-color: var(--dark);
             color: var(--white);
         }
-
+        
         .contact-container {
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
         }
-
+        
         .contact h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-
+        
         .contact p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
-
+        
         .contact-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-
-        .btn-light {
-            background-color: var(--secondary);
-            color: var(--white);
-        }
-
-        .btn-light:hover {
-            background-color: var(--primary);
-        }
-
-        /* Footer */
+        
+        /* NEW DETAILED FOOTER */
         footer {
             background-color: #0a0a0a;
-            color: #999;
-            padding: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
+            color: #ccc;
+            padding: 3rem 1rem;
         }
-
+        
+        footer div {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        footer > div > div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        footer h4 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            line-height: 1.8;
+        }
+        
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: var(--secondary);
+        }
+        
+        footer p {
+            margin: 0;
+        }
+        
+        footer div:last-child {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-
+            
             .hero h1 {
                 font-size: 2rem;
             }
-
+            
             .hero p {
                 font-size: 1rem;
             }
-
+            
             .about-content {
                 grid-template-columns: 1fr;
             }
-
+            
             .section-title {
                 font-size: 2rem;
             }
-
+            
             .services-grid {
                 grid-template-columns: 1fr;
             }
@@ -378,9 +420,11 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo" style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
-            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/5fd06b8a-7185-4f34-9889-5e254483f5ee" alt="DevOps Farm Logo" style="height: 40px; width: auto;">
-            <span style="background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 0.9rem;">DEVOPSFARM</span>
+        <div class="logo">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/5fd06b8a-7185-4f34-9889-5e254483f5ee" alt="DevOps Farm Logo" style="height: 40px; width: auto;">
+                <span style="background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 0.9rem;">DEVOPS FARM</span>
+            </div>
         </div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
@@ -413,7 +457,7 @@
                 <p>We believe in practical solutions that deliver measurable results.</p>
             </div>
             <div class="about-image">
-                🚀 Expert DevOps Solutions for Your Business
+                Expert DevOps Solutions for Your Business
             </div>
         </div>
     </section>
@@ -431,14 +475,14 @@
                     <span class="service-tag">Cloud</span>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🔄</div>
+                    <div class="service-icon">🚀</div>
                     <h3>CI/CD Automation</h3>
                     <p>Implement robust continuous integration and deployment pipelines.</p>
                     <span class="service-tag">Automation</span>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔒</div>
-                    <h3>Security & Compliance</h3>
+                    <h3>Security Compliance</h3>
                     <p>Secure your infrastructure with industry-leading security practices.</p>
                     <span class="service-tag">Security</span>
                 </div>
@@ -485,9 +529,70 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 DevOps Farm. All rights reserved. | Built with ❤️ for growth</p>
+    <!-- NEW COMPLETE FOOTER -->
+    <footer style="background-color: #0a0a0a; color: #ccc; padding: 3rem 1rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <!-- Location -->
+                <div>
+                    <h4 style="color: var(--secondary); margin-bottom: 1rem;">Location</h4>
+                    <p>
+                        DEVOPS FARM<br>
+                        BHASKAR CIRCLE, RATANADA<br>
+                        JODHPUR (RAJ.)
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 style="color: var(--secondary); margin-bottom: 1rem;">Contact</h4>
+                    <p>
+                        📧 <a href="mailto:query@devopsfarm.in" style="color: var(--secondary); text-decoration: none;">query@devopsfarm.in</a><br>
+                        📱 +91 87695 11173<br>
+                        📱 +91 99715 66583<br>
+                        📱 +91 90014 77277<br>
+                        📱 +91 70143 82263
+                    </p>
+                </div>
+
+                <!-- Our Solutions -->
+                <div>
+                    <h4 style="color: var(--secondary); margin-bottom: 1rem;">Our Solutions</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">AI Platform</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">AI Algorithms</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Industry Applications</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 style="color: var(--secondary); margin-bottom: 1rem;">Services</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Trainings</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Consultancy</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Internship</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Master Class</a></li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div>
+                    <h4 style="color: var(--secondary); margin-bottom: 1rem;">Courses</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 1.8;">
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">System Administrator</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Kubernetes Administrator</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Docker Essentials</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Cloud Computing Fundamentals</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Text -->
+            <div style="text-align: center; border-top: 1px solid #333; padding-top: 1rem; font-size: 0.9rem; color: #999;">
+                &copy; 2025 DevOps Farm. All rights reserved. | Built with ❤️ for growth
+            </div>
+        </div>
     </footer>
 </body>
 </html>
