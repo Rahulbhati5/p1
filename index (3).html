@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Farm - Business Growth Made Simple</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8C1DC3;
+            --secondary: #CD1FA2;
+            --bg: #F8F0E3;
+            --gray: #BEBDBF;
+            --dark: #121316;
+            --white: #FFFFFF;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--bg);
+            padding: 6rem 2rem;
+            text-align: center;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(140, 29, 195, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg);
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--bg);
+            padding: 6rem 2rem;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--gray);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 12px 24px rgba(140, 29, 195, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-tag {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Career Section */
+        .career {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .career-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .career h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .career p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background-color: var(--dark);
+            color: var(--white);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-light {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-light:hover {
+            background-color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            color: #999;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo" style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/5fd06b8a-7185-4f34-9889-5e254483f5ee" alt="DevOps Farm Logo" style="height: 40px; width: auto;">
+            <span style="background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 0.9rem;">DEVOPSFARM</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="nav-cta">Get Started</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Business Growth <span class="hero-highlight">Made Simple</span></h1>
+        <p>Transform your business with expert DevOps consultancy. Scale faster, deploy smarter, grow stronger.</p>
+        <div class="hero-cta">
+            <button class="btn btn-primary">Book Free Consultation</button>
+            <button class="btn btn-secondary">Learn More</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About DevOps Farm</h2>
+        <p class="section-subtitle">We empower businesses to thrive in a rapidly changing tech landscape</p>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Who We Are</h3>
+                <p>DevOps Farm is a leading consultancy specializing in cloud infrastructure, DevOps transformation, and business automation.</p>
+                <p>Our team of seasoned experts partners with businesses of all sizes to streamline operations, reduce costs, and accelerate growth.</p>
+                <p>We believe in practical solutions that deliver measurable results.</p>
+            </div>
+            <div class="about-image">
+                🚀 Expert DevOps Solutions for Your Business
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive solutions tailored to your business needs</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Design, deploy, and manage scalable cloud infrastructure on AWS, Azure, or GCP.</p>
+                    <span class="service-tag">Cloud</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>CI/CD Automation</h3>
+                    <p>Implement robust continuous integration and deployment pipelines.</p>
+                    <span class="service-tag">Automation</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Security & Compliance</h3>
+                    <p>Secure your infrastructure with industry-leading security practices.</p>
+                    <span class="service-tag">Security</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Monitoring & Analytics</h3>
+                    <p>Real-time monitoring and insights into your system performance.</p>
+                    <span class="service-tag">Analytics</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Team Training</h3>
+                    <p>Upskill your team with hands-on DevOps training and workshops.</p>
+                    <span class="service-tag">Training</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>Consulting</h3>
+                    <p>Strategic consulting to optimize your DevOps maturity and efficiency.</p>
+                    <span class="service-tag">Consulting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Section -->
+    <section class="career" id="career">
+        <div class="career-content">
+            <h2>Build Your Career with DevOps Farm</h2>
+            <p>Join a team of passionate DevOps engineers and consultants. Grow, learn, and make an impact.</p>
+            <button class="btn btn-light">View Open Roles</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Let's discuss how DevOps Farm can help you achieve your goals.</p>
+            <div class="contact-buttons">
+                <button class="btn btn-light">Schedule Consultation</button>
+                <button class="btn btn-secondary">Get In Touch</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DevOps Farm. All rights reserved. | Built with ❤️ for growth</p>
+    </footer>
+</body>
+</html>
